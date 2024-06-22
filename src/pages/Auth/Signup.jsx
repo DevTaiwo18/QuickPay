@@ -35,7 +35,7 @@ const SignUp = () => {
     <div className="min-h-screen flex flex-col justify-center items-center px-2">
       <div className="w-full max-w-md">
         <form
-          className="rounded px-8 pb-8 mb-4 mt-10"
+          className="rounded px-8 pb-8 mb-2 mt-5"
           onSubmit={handleSubmit}
         >
           <NavLink className="flex justify-center items-center" to="/">
@@ -51,7 +51,7 @@ const SignUp = () => {
           <h2 className="mb-6 mt-0 text-2xl font-bold text-center">Sign Up</h2>
 
           {/* USERNAME */}
-          <div className="mb-4">
+          <div className="mb-2">
             <label className="block text-sm font-bold mb-2">Username</label>
             <input
               className="appearance-none text-sm border border-gray-600 rounded w-full py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-blue-600"
@@ -65,7 +65,7 @@ const SignUp = () => {
           {/* END OF USERNAME */}
 
           {/* EMAIL */}
-          <div className="mb-4">
+          <div className="mb-2">
             <label className="block text-sm font-bold mb-2" htmlFor="email">
               Email
             </label>
@@ -81,7 +81,7 @@ const SignUp = () => {
           {/* END OF EMAIL */}
 
           {/* PHONE NUMBER */}
-          <div className="mb-4 hidden">
+          <div className="mb-2 hidden">
             <label className="block text-sm font-bold mb-2" htmlFor="phoneNumber">
               Phone*
             </label>
