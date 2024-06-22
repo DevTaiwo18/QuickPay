@@ -33,7 +33,7 @@ const Faqs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className=" bg-gray-100">
       <section className="py-2 md:py-10">
         <div className="container mx-auto px-5 md:px-8">
           <h1 className="text-2xl md:text-4xl font-bold text-center mb-3">FAQs</h1>
