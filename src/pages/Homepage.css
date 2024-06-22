@@ -1,0 +1,33 @@
+@import '../styles/variables.css';
+
+.hero{
+    min-height: 80vh !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(118, 241, 190, 0.1)), url('../assets/bg-1.png');
+}
+
+.hero-right .link:hover .hero-card{
+    background: var(--light-blue);
+    scale: 1.1;
+}
+
+.hero-right .link:hover p{
+    color: blue;
+    scale: 1.1;
+}
+
+.hero-right p{
+    transition: var(--transition);
+}
+
+.hero-right .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-card{
+    box-shadow: var(--shadow3);
+    transition: var(--transition);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
