@@ -158,7 +158,7 @@ const Service = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-10 md:py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-base md:text-base font-medium text-blue-400 mb-4 text-center md:text-center">
           SERVICES

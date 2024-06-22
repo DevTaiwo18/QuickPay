@@ -34,7 +34,7 @@ const Faqs = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="container mx-auto px-5 md:px-8">
           <h1 className="text-2xl md:text-4xl font-bold text-center mb-3">FAQs</h1>
           <p className="text-center text-sm md:text-lg text-gray-700 mb-12">
@@ -47,7 +47,7 @@ const Faqs = () => {
                 className=" border-b border-blue-500 py-2"
               >
                 <h2
-                  className="text-lg md:text-lg font-bold cursor-pointer mb-1 flex justify-between items-center text-blue-500"
+                  className="text-sm md:text-lg font-bold cursor-pointer mb-1 flex justify-between items-center text-blue-500"
                   onClick={() => handleToggle(index)}
                 >
                   {faq.question}
