@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className='min-h-screen bg-gray-100'>
       {/* Hero Section */}
-      <section className="py-10">
+      <section className="py-3 md:py-10">
         <div className="container mx-auto md:px-8 px-5">
           <h1 className='text-2xl md:text-3xl font-bold text-center mb-3'>Contact Us</h1>
           <p className="text-center text-sm md:text-sm text-gray-700 font-medium md-8 md:mb-12">
