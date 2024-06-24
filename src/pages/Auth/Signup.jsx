@@ -24,7 +24,6 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your submit logic here
   };
 
   const togglePassword = () => {
@@ -35,7 +34,7 @@ const SignUp = () => {
     <div className="min-h-screen flex flex-col justify-center items-center px-2">
       <div className="w-full max-w-md">
         <form
-          className="rounded px-8 pb-8 mb-2 mt-5"
+          className="rounded px-8 pb-8 mb-2 mt-10"
           onSubmit={handleSubmit}
         >
           <NavLink className="flex justify-center items-center" to="/">

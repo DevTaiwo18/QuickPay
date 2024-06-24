@@ -7,7 +7,7 @@ const Hero = () => {
       {/* HERO LEFT */}
       <div className="md:w-3/5 h-fit  ">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2">Welcome To</h1>
-        <h1 className="text-2xl sm:text-4xl font-bold mb-8">QuickPay</h1>
+        <h1 className="text-2xl sm:text-4xl font-bold mb-8">Quick-Pay</h1>
         <p className="mb-8 font-medium">
           Nigeria's leading enterprise solution for all your telecom needs. <br />
           Airtime, DATA, Cable Subscription (DSTV, GOTV, Startime), and Virtual Numbers.
