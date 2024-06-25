@@ -30,7 +30,7 @@ const Hero = () => {
 
       {/* HERO RIGHT */}
       <div className="grid md:grid-cols-2 gap-8 w-100  lg:w-2/5 p-4 hero-right h-fit">
-        <Link to={"/dashboard"} className="link">
+        <Link to={"/dashboard/"} className="link">
           <div className="card">
             <div className="   flex items-center jsutify-center w-full py-8 hero-card">
               <svg
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
         </Link>
 
-        <Link to={"/dashboard"} className="link">
+        <Link to={"/dashboard/"} className="link">
           <div className="card">
             <div className="   flex items-center jsutify-center w-full py-8 hero-card">
               <svg
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
         </Link>
 
-        <Link to={"/dashboard"} className="link">
+        <Link to={"/dashboard/"} className="link">
           <div className="card">
             <div className="   flex items-center jsutify-center w-full py-8 hero-card">
               <svg
@@ -96,7 +96,7 @@ const Hero = () => {
           </div>
         </Link>
 
-        <Link to={"/dashboard"} className="link">
+        <Link to={"/dashboard/"} className="link">
           <div className="card">
             <div className="  flex items-center jsutify-center w-full py-8 hero-card">
               <svg
