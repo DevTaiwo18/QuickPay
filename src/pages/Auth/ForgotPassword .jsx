@@ -28,7 +28,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-white px-2 md:px-0">
+        <div className="min-h-screen flex items-center justify-center bg-white px-4 md:px-0">
             <div className="max-w-md w-full space-y-8">
                 <div>
                     <NavLink className="flex justify-center items-center" to="/">
