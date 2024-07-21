@@ -24,9 +24,6 @@ module.exports = {
         info: '#0dcaf0',
       },
     },
-    screens: {
-      md: '1000px', 
-    },
   },
   plugins: [],
 }
