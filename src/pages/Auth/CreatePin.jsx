@@ -12,6 +12,7 @@ const CreatePin = () => {
   ];
   const [pin, setPin] = useState(['', '', '', '']);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
   const { createPin } = useAuthContext();
 
@@ -28,6 +29,14 @@ const CreatePin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
+
+    // Check if any PIN field is empty
+    if (pin.includes('')) {
+      setError('Please enter a 4-digit PIN.');
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await createPin(pin.join(''));
@@ -36,12 +45,12 @@ const CreatePin = () => {
         navigate('/dashboard/');
       } else {
         console.error('PIN setting failed:', response.error);
-        // Handle error, show error message, etc.
+        setError('PIN setting failed. Please try again.');
       }
     } catch (error) {
       console.error('PIN setting failed:', error);
+      setError('PIN setting failed. Please try again.');
       setLoading(false);
-      // Handle error, show error message, etc.
     }
   };
 
@@ -75,6 +84,11 @@ const CreatePin = () => {
               />
             ))}
           </div>
+          {error && (
+            <div className="text-red-500 text-center">
+              {error}
+            </div>
+          )}
           <div>
             <button
               type="submit"

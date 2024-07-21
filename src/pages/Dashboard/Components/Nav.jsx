@@ -1,24 +1,15 @@
 import {
   Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Menu,
   MenuButton,
-  MenuItem,
   MenuItems,
+  MenuItem,
   Transition,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon, MicrophoneIcon } from "@heroicons/react/24/outline";
+import { MicrophoneIcon } from "@heroicons/react/24/outline";
 import { assets } from "../../../assets/assets";
 import { useAuthContext } from "../../../contexts/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
-
-const navigation = [
-  { name: "Dashboard", href: "/dashboard/" },
-  { name: "Services", href: "/dashboard/services" },
-  { name: "Wallet", href: "/dashboard/wallet" },
-  { name: "User", href: "/dashboard/user" },
-];
+import { useNavigate } from "react-router-dom";
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
@@ -39,8 +30,6 @@ const DashboardNav = () => {
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              </div>
               <div className="flex flex-1 items-center sm:items-stretch">
                 <div className="flex flex-shrink-0 items-center">
                   <img
@@ -62,13 +51,12 @@ const DashboardNav = () => {
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
-                  <div className="flex-col items-center">
-                    <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="sr-only">Open user menu</span>
+                  <div className="flex items-center">
+                    <MenuButton className="relative flex items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <img
-                        className="h-8 w-full rounded-full"
+                        className="h-8 w-8 rounded-full sm:h-10 sm:w-10"
                         src={user?.profilePic || assets.userImage}
-                        alt=""
+                        alt="Profile"
                       />
                     </MenuButton>
                   </div>
