@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active .icon {
+  color: #fff;
+  background-color: #60A5FA; 
+  transform: translateY(-50%);
+  transition: transform 0.3s, background-color 0.3s;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem;
+  height: 35px;
+  width: 35px;
+  margin-bottom: -.5rem;
+  border-radius: 50%;
+}
+
+.active .icon::before {
+  content: 'hkghjkl';
+  height: 10px;
+  width: 10px;
+}

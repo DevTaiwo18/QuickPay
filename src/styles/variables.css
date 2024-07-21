@@ -1,0 +1,15 @@
+:root{
+
+    /* color */
+    --blue: #60A5FA;
+    --info: #0dcaf0;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --light-blue: rgb(230, 255, 230);
+    --lighter-blue: rgb(239, 252, 239);
+
+    --shadow1: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);
+    --shadow2: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+    --shadow3: 5px 5px 25px rgba(54, 252, 87, 0.15);
+    --transition: all .3s ease-in-out;
+}
