@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import { useAuthContext } from "../../contexts/AuthContext";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -106,6 +107,13 @@ const SignUp = () => {
               value={formData.password}
               onChange={handleChange}
             />
+            <button
+              type="button"
+              onClick={togglePassword}
+              className="absolute inset-y-0 mt-7 right-0 flex items-center pr-3"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
             <span className="absolute inset-y-0 left-0 top-20 flex items-center pr-3 text-xs text-gray-400">
               Password must contain at least 6 characters
             </span>

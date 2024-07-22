@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 import { useAuthContext } from '../../contexts/AuthContext';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ const Signin = () => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async () => {
     setLoading(true);
@@ -47,18 +49,25 @@ const Signin = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-6 relative">
             <label className="block text-sm font-bold mb-2" htmlFor="password">
               Password
             </label>
             <input
               className="appearance-none border border-gray-600 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:border-blue-600"
               id="password"
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               placeholder="******************"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-0 flex items-center pr-3"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
             <Link to="/forgotPassword">
               <p className="text-xs italic text-gray-400 mt-3">Forgot your password?</p>
             </Link>
