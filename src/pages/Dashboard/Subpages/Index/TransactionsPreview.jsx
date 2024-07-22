@@ -40,13 +40,12 @@ const TransactionsPreview = () => {
 
                   <div>
                     <h3
-                      className={`text-${
-                        status === "success"
+                      className={`text-${status === "success"
                           ? "green"
                           : status === "pending"
-                          ? "amber"
-                          : "red"
-                      }-500  text-sm md:text-lg`}
+                            ? "amber"
+                            : "red"
+                        }-500  text-sm md:text-lg`}
                     >
                       {customerId}
                     </h3>
@@ -67,8 +66,9 @@ const TransactionsPreview = () => {
             );
           })
         ) : (
-          <div className="flex items-center justify-center min-h-44 border border-gray-400 rounded">
-            <p className="text-xl text-gray-500">No transactions...</p>
+          <div className="flex flex-col items-center gap-0 min-h-44 border border-gray-400 rounded">
+            <img src={assets.notransaction} alt="" className="h-50 mt-10 w-64 text-gray-500" />
+            <p className="text-sm md:text-xl text-gray-500 mb-10">No transactions...</p>
           </div>
         )}
       </div>
